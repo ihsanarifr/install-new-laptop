@@ -1,6 +1,7 @@
 !bash
 
-$HOME = /home/ihsan/
+HOME = /home/ihsan/
+HUGO_VERSION = 0.53
 
 apt-get update -y
 apt install software-properties-common apt-transport-https wget git curl -y
@@ -47,3 +48,7 @@ sudo wget --output-document=/usr/local/bin/docker-compose "https://github.com/do
 sudo chmod +x /usr/local/bin/docker-compose
 sudo wget --output-document=/etc/bash_completion.d/docker-compose "https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose"
 printf '\nDocker Compose installed successfully\n\n'
+
+## install hugo
+wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_$HUGO_VERSION_Linux-64bit.deb
+sudo dpkg -i /tmp/hugo.deb
