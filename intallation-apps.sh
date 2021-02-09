@@ -52,3 +52,6 @@ printf '\nDocker Compose installed successfully\n\n'
 ## install hugo
 wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_$HUGO_VERSION_Linux-64bit.deb
 sudo dpkg -i /tmp/hugo.deb
+
+## install protobuf
+sudo apt-get install autoconf automake libtool curl make g++ unzip
